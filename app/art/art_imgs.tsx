@@ -1,44 +1,51 @@
-import Image from "next/image";
-import { RowsPhotoAlbum } from "react-photo-album";
-import "react-photo-album/rows.css";
 
-interface ImageData {
+
+
+
+export interface ImageData {
     src: string;
     alt: string;
+    caption: string
 }
 
-const posterImgs: ImageData[] = [
+export const posterImgs: ImageData[] = [
 
     {
         src: "/art_images/posters/HystericsWitches.png",
-        alt: "Hysterics Witches comedy show poster"
+        alt: "Hysterics Witches comedy show poster",
+        caption: "Hysterics Witches comedy show poster"
     },
     {
         src: "/art_images/posters/mnl_11.png",
-        alt: "MNL 11 comedy show poster"
+        alt: "MNL 11 comedy show poster",
+        caption: "MNL 11 comedy show poster"
     },
     {
         src: "/art_images/posters/mnl_12.png",
-        alt: "MNL 12 comedy show poster"
+        alt: "MNL 12 comedy show poster",
+        caption:  "MNL 12 comedy show poster"
     },
     {
         src: "/art_images/posters/mnl_13.png",
-        alt: "MNL 13 comedy show poster"
+        alt: "MNL 13 comedy show poster",
+        caption:  "MNL 13 comedy show poster"
     },
     {
         src: "/art_images/posters/mnl_13_bark.png",
-        alt: "MNL 13 comedy show barking card"
+        alt: "MNL 13 comedy show barking card",
+        caption: "MNL 13 comedy show barking card"
     },
 
 ];
 
-export default function PosterImages() {
+/*export default function PosterImages() {
     return (
         <div>
-            {posterImgs.map((image, index) => (
-                <Image key={index} src={image.src} alt={image.alt} height="500" />
-            ))}
+        <ImageGallery
+      imagesInfoArray={posterImgs}
+      columnCount={"auto"}
+      columnWidth={230}
+      gapSize={24} />
         </div>
-
     );
-}
+}*/
