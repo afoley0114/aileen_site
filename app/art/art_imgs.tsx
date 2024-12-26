@@ -38,6 +38,22 @@ export const posterImgs: ImageData[] = [
 
 ];
 
+
+export const logoImgs: ImageData[] = [
+
+    {
+        src: "/art_images/logos/extinct.png",
+        alt: "Extinct Comedy Logo",
+        caption: "Logo design for Extinct Comedy, a digital sketch group."
+    },
+    {
+        src: "/art_images/logos/witif.png",
+        alt: "WITIF Logo",
+        caption: "Logo design for Well I Think It's Funny, a digital sketch group."
+    }
+
+];
+
 /*export default function PosterImages() {
     return (
         <div>

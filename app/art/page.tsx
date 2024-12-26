@@ -1,7 +1,7 @@
 
 "use client";
 import { ImageGallery } from "react-image-grid-gallery";
-import { ImageData, posterImgs } from "./art_imgs";
+import { ImageData, posterImgs, logoImgs } from "./art_imgs";
 
 
 function ImageGrid(imgsArray: ImageData[]) {
@@ -9,8 +9,8 @@ function ImageGrid(imgsArray: ImageData[]) {
       <div>
       <ImageGallery
     imagesInfoArray={imgsArray}
-    columnCount={"auto"}
-    columnWidth={230}
+    columnCount="auto"
+    columnWidth={300}
     gapSize={24} />
       </div>
   );
@@ -19,14 +19,14 @@ function ImageGrid(imgsArray: ImageData[]) {
 
 export default function Home() {
   const posterGallery = ImageGrid(posterImgs);
-  
+  const logoGallery = ImageGrid(logoImgs);
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <div className="h-full flex flex-col">
         
         { posterGallery }
+        { logoGallery }
        
-      </main>
       
     </div>
   );
