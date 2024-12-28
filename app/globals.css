@@ -22,9 +22,6 @@ html {
     --foreground: #AFBFD5;
     height: 100%;
     width: 100%;
-
-
-
   }
 }
 
@@ -38,10 +35,8 @@ body {
   width: 100%;
 }
 
-.container {
-  display: inline-flex;
-  min-width: fit-content;
-  min-height: fit-content;
+.container-full {
+  display: flex;
   width: 100%;
   height: 100%;
   margin:0;
@@ -54,19 +49,52 @@ body {
   background-repeat: 'repeat';
 }
 
+.sidebar-box {
+  top: 0;
+  float: left;
+  order: 1;
+ 
+
+  height: 100%;
+  width: 20%;
+  flex-basis: 20%;
+
+}
+
+.sticky-nav {
+  flex-basis: 20%;
+  
+  min-width: 0;
+  min-height: 0;
+ /* height: 80%;
+  width: 80%;
+  object-fit: contain;*/
+
+}
+
+.sticky-img {
+  width: auto;
+  height: auto;
+  min-width: 0;
+  min-height: 0;
+  object-fit: contain;
+}
+
 .sidebar {
   top: 0;
   float: left;
+  order: 1;
   position: fixed;
 
   height: 100%;
-  width: 25vw;
-  
+  width: 20%;
+  display: inline-flex;
+  flex-direction: column;
 
   background-color: #AFBFD5;
   background-image: url('../src/cork_tile.png');
   background-repeat: 'repeat';
-  background-size:50%;
+  background-size: 50%;
   margin: 0;
   padding: 0;
   
@@ -74,13 +102,12 @@ body {
 }
 
 .sidebar-content {
-  flex-basis: 80%;
+  flex: auto;
   order: 2;
   align-items: center;
-  justify-items: center;
+  justify-items: start;
   display: inline-flex;
-  min-width: fit-content;
-  min-height: fit-content;
+
 
   flex-direction: column;
   width: 100%;
@@ -95,6 +122,9 @@ body {
   order: 2;
   margin: auto;
   height: 100%;
+  width: 80vw;
+  justify-items: center;
+  align-items: center;
 }
 
 /*fixed top-0 left-0 h-screen w-20vw bg-gray-200"*/

@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Image from "next/image";
+import siteTitle from "../public/site_images/site_name_tape.png";
+import aboutImg from "../public/site_images/site_about.png";
+import projectsImg from "../public/site_images/site_projects.png";
+import artImg from "../public/site_images/site_art.png";
+import contactImg from "../public/site_images/site_contact.png";
 import Link from "next/link";
 import "./globals.css";
 import { Navbar } from 'react-bootstrap'
+import { FiTable } from "react-icons/fi";
 
 
 const geistSans = Geist({
@@ -24,50 +30,46 @@ export const metadata: Metadata = {
 
 const Sidebar: React.FC = () => {
   return (
+
     <div className="sidebar">
       
-        <div className = "basis-1/5 order-first">
+        <div className = "order-first basis-1/5">
       <Link href="/">
-        <Image src="/site_images/site_name_tape.png" 
-              alt="Site header" width={0} height={0} 
-              sizes="100vw" 
-              style={{width: '100%', height: 'auto'}}/>
+        <Image src={siteTitle}
+              alt="Site header"
+              style={{width: '100%', height: 'auto'}}
+              className = "object-contain" />
       </Link>
       </div>
-      <div className="sidebar-content">
-      <div className="block items-center w-full h-full">
-      <Link href="/about">
-        <Image src="/site_images/site_about.png" 
-              alt="Site header" width={0} height={0} 
-              sizes="100vw" 
-              style={{width: '70%', height: 'auto'}}/>
+      
+      <Link href="/about" className = "sticky-nav">
+        <Image src= {aboutImg}
+              alt="Site header"
+              className = "sticky-img"
+              />
       </Link>
-      </div>
-      <div className="block items-center w-full h-full">
-      <Link href="/about">
-        <Image src="/site_images/site_projects.png" 
-              alt="Site header" width={0} height={0} 
-              sizes="100vw" 
-              style={{width: '70%', height: 'auto'}}/>
+      <Link href="/about" className = "sticky-nav">
+        <Image src= {projectsImg}
+              alt="Site header"
+              className = "sticky-img"/>
       </Link>
-      </div>
-      <div className="block items-center w-full h-full">
-      <Link href="/art">
-        <Image src="/site_images/site_art.png" 
-              alt="Site header" width={0} height={0} 
-              sizes="100vw" 
-              style={{width: '70%', height: 'auto'}}/>
+
+      <Link href="/art" className = "sticky-nav">
+      <Image src= {artImg}
+              alt="Site header"
+              className = "sticky-img"
+              />
       </Link>
-      </div>
-      <div className="block items-center w-full h-full">
-      <Link href="/art">
-        <Image src="/site_images/site_contact.png" 
-              alt="Site header" width={0} height={0} 
-              sizes="100vw" 
-              style={{width: '70%', height: 'auto'}}/>
+
+      
+      <Link href="/art " className = "sticky-nav">
+        <Image src= {contactImg}
+              alt="Site header"
+              className = "sticky-img"
+              />
       </Link>
-      </div>
-      </div>
+    
+      
     </div>
   );
 }
@@ -85,12 +87,13 @@ export default function RootLayout({
     </head>
       <body
         className={'${geistSans.variable} ${geistMono.variable} antialiased'} >
-          <div className = "container">
-            <div className="basis-1/4 order-first">
+          <div className = "container-full">
+            <div className = "sidebar-box">
               <Sidebar />
             </div>
+          
             <div className = "content">
-            <main className="items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
+            <main className="container items-center justify-items-center min-h-screen">
               {children}
             </main>
             </div>
