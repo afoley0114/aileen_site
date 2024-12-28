@@ -8,9 +8,12 @@ import artImg from "../public/site_images/site_art.png";
 import contactImg from "../public/site_images/site_contact.png";
 import Link from "next/link";
 import "./globals.css";
+import localFont from 'next/font/local';
+
 import { Navbar } from 'react-bootstrap'
 import { FiTable } from "react-icons/fi";
 
+const kiwiSoda = localFont({src: '../public/fonts/KiwiSoda.ttf', variable: '--font-kiwi-soda'});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,15 +36,16 @@ const Sidebar: React.FC = () => {
 
     <div className="sidebar">
       
-        <div className = "order-first basis-1/5">
-      <Link href="/">
+        <div className = "flex order-first basis-[10%]">
+      <Link href="/" className="item-center justify-items-center">
         <Image src={siteTitle}
               alt="Site header"
               style={{width: '100%', height: 'auto'}}
-              className = "object-contain" />
+              className = "object-contain item-center justify-items-center" />
       </Link>
       </div>
       
+      <div className = "sidebar-content">
       <Link href="/about" className = "sticky-nav">
         <Image src= {aboutImg}
               alt="Site header"
@@ -69,7 +73,10 @@ const Sidebar: React.FC = () => {
               />
       </Link>
     
-      
+      </div>
+
+      <div className = "flex order-3 basis-[10%]">
+      </div>
     </div>
   );
 }
@@ -81,19 +88,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={kiwiSoda.className}>
     <head>
 
     </head>
-      <body
-        className={'${geistSans.variable} ${geistMono.variable} antialiased'} >
+      <body>
           <div className = "container-full">
             <div className = "sidebar-box">
               <Sidebar />
             </div>
           
             <div className = "content">
-            <main className="container items-center justify-items-center min-h-screen">
+            <main className="container items-center justify-items-center min-h-screen p-10">
               {children}
             </main>
             </div>

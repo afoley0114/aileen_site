@@ -54,6 +54,26 @@ export const logoImgs: ImageData[] = [
 
 ];
 
+export const tradImgs: ImageData[] = [
+
+    {
+        src: "/art_images/traditional/dogprint.png",
+        alt: "Dog screenprint",
+        caption: "Four layer screenprint of a dog."
+    },
+    {
+        src: "/art_images/traditional/family.png",
+        alt: "Family relief print",
+        caption: "One-layer relief print of some miniature toys."
+    },
+    {
+        src: "/art_images/traditional/kingofdiamonds.png",
+        alt: "King of Diamonds print",
+        caption: '"King of Diamonds", a four layer relief print.'
+    },
+
+];
+
 /*export default function PosterImages() {
     return (
         <div>
