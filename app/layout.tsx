@@ -13,7 +13,7 @@ import localFont from 'next/font/local';
 import { Navbar } from 'react-bootstrap'
 import { FiTable } from "react-icons/fi";
 
-const kiwiSoda = localFont({src: '../public/fonts/KiwiSoda.ttf', variable: '--font-kiwi-soda'});
+//const kiwiSoda = localFont({src: '../public/fonts/KiwiSoda.ttf', variable: '--font-kiwi-soda'});
 
 const cooperBits = localFont({src: '../public/fonts/cooperBits.ttf', variable: '--font-cooper-bits'});
 
