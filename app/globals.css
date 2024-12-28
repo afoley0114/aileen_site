@@ -5,6 +5,7 @@
 html {
   height: 100%;
   width: 100%;
+  font-size: 100%
 }
 
 :root {
@@ -19,8 +20,9 @@ html {
 @media (prefers-color-scheme: dark) {
   :root {
     /*--background: #45455E;
-    --foreground: #AFBFD5;*/
-    --background: #faf7f4;
+    --foreground: #AFBFD5;
+    --background: #faf7f4;*/
+    --background: #d9c2a7;
     --foreground: #181E25;
     
     height: 100%;
@@ -36,6 +38,19 @@ body {
   /*font-family: Arial, Helvetica, sans-serif;*/
   height: 100%;
   width: 100%;
+  font-size: 100%;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 1.875em;
+}
+
+p {
+  font-size: 0.875em;
 }
 
 .container-full {
@@ -97,7 +112,7 @@ body {
   display: inline-flex;
   flex-direction: column;
 
-  background-color: #faf7f4;
+  background-color: #d9c2a7;
   /*background-image: url('../src/cork_tile.png');
   background-repeat: 'repeat';
   background-size: 50%;*/

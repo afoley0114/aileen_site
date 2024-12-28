@@ -15,6 +15,12 @@ import { FiTable } from "react-icons/fi";
 
 const kiwiSoda = localFont({src: '../public/fonts/KiwiSoda.ttf', variable: '--font-kiwi-soda'});
 
+const cooperBits = localFont({src: '../public/fonts/cooperBits.ttf', variable: '--font-cooper-bits'});
+
+const pixelArial = localFont({src: '../public/fonts/PIXEARG_.ttf', variable: '--font-pixel-arial'});
+
+
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -88,7 +94,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={kiwiSoda.className}>
+    <html lang="en" className={pixelArial.className}>
     <head>
 
     </head>

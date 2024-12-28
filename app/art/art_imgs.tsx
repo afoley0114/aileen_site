@@ -13,7 +13,7 @@ export const posterImgs: ImageData[] = [
     {
         src: "/art_images/posters/HystericsWitches.png",
         alt: "Hysterics Witches comedy show poster",
-        caption: "Hysterics Witches comedy show poster"
+        caption: "Witch-themed comedy show poster for Hysterics"
     },
     {
         src: "/art_images/posters/mnl_11.png",
@@ -70,6 +70,26 @@ export const tradImgs: ImageData[] = [
         src: "/art_images/traditional/kingofdiamonds.png",
         alt: "King of Diamonds print",
         caption: '"King of Diamonds", a four layer relief print.'
+    },
+
+];
+
+export const digitalImgs: ImageData[] = [
+
+    {
+        src: "/art_images/digital/kyuuri.jpg",
+        alt: "Kyuuri drawing",
+        caption: "Illustration of my cat done in Clip Studio Paint."
+    },
+    {
+        src: "/art_images/digital/kabocha.png",
+        alt: "Kabocha edit",
+        caption: "Image of cat edited in Photoshop."
+    },
+    {
+        src: "/art_images/digital/kyuurismall.png",
+        alt: "Kyuuri Pokemon drawing",
+        caption: 'Illustration of my cat done in the style of Pokémon artist Ken Sugimori.'
     },
 
 ];
