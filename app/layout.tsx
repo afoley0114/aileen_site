@@ -10,8 +10,6 @@ import Link from "next/link";
 import "./globals.css";
 import localFont from 'next/font/local';
 
-import { Navbar } from 'react-bootstrap'
-import { FiTable } from "react-icons/fi";
 
 //const kiwiSoda = localFont({src: '../public/fonts/KiwiSoda.ttf', variable: '--font-kiwi-soda'});
 
@@ -42,7 +40,7 @@ const Sidebar: React.FC = () => {
       </Link>
       </div>
       
-      <div className = "sidebar-content">
+      <div className = "invisible md:visible sidebar-content">
       <Link href="/about" className = "sticky-nav">
         <Image src= {aboutImg}
               alt="Site header"
@@ -87,16 +85,56 @@ export default function RootLayout({
   return (
     <html lang="en" className={pixelArial.className}>
     <head>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
       <body>
-          <div className = "container-full">
-            <div className = "sidebar-box">
-              <Sidebar />
+          <div className = "grid grid-cols-1 md:grid-cols-5 auto-rows-min">
+            <div className = "col-span-1 md:col-span-1">
+            <div className = "flex order-first  md:basis-[10%] justify-center items-center md:items-start">
+      <Link href="/" className="item-center justify-items-center w-80 md:w-full">
+        <Image src={siteTitle}
+              alt="Site header"
+              style={{width: '100%', height: 'auto'}}
+              className = "item-center justify-items-center" />
+      </Link>
+      </div>
+      
+      <div className = "hidden md:visible sidebar-content">
+      <Link href="/about" className = "hidden md:inline-block sticky-nav">
+        <Image src= {aboutImg}
+              alt="Site header"
+              className = "sticky-img"
+              />
+      </Link>
+      <Link href="/about" className = "hidden md:inline-block sticky-nav">
+        <Image src= {projectsImg}
+              alt="Site header"
+              className = "sticky-img"/>
+      </Link>
+
+      <Link href="/art" className = "hidden md:inline-block sticky-nav">
+      <Image src= {artImg}
+              alt="Site header"
+              className = "sticky-img"
+              />
+      </Link>
+
+      
+      <Link href="/art " className = "hidden md:inline-block sticky-nav">
+        <Image src= {contactImg}
+              alt="Site header"
+              className = "sticky-img"
+              />
+      </Link>
+    
+      </div>
+
+      <div className = "hidden md:inline-block order-3 basis-[10%]">
+      </div>
             </div>
           
-            <div className = "content">
-            <main className="container items-center justify-items-center min-h-screen p-10">
+            <div className = "col-span-full md:col-span-4 content">
+            <main className="container items-center justify-items-center min-h-screen p-3 md:p-10">
               {children}
             </main>
             </div>
