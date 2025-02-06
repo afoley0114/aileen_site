@@ -11,15 +11,23 @@ export interface ImageData {
 export const posterImgs: ImageData[] = [
 
     {
+        src: "/art_images/posters/mnl_14.png",
+        alt: "MNL 14 comedy show poster",
+        caption: "MNL 14 comedy show poster"
+    },
+
+    {
         src: "/art_images/posters/HystericsWitches.png",
         alt: "Hysterics Witches comedy show poster",
         caption: "Witch-themed comedy show poster for Hysterics"
     },
+    /*
     {
         src: "/art_images/posters/mnl_11.png",
         alt: "MNL 11 comedy show poster",
         caption: "MNL 11 comedy show poster"
     },
+    */
     {
         src: "/art_images/posters/mnl_12.png",
         alt: "MNL 12 comedy show poster",
@@ -30,11 +38,16 @@ export const posterImgs: ImageData[] = [
         alt: "MNL 13 comedy show poster",
         caption:  "MNL 13 comedy show poster"
     },
+
+    /*
     {
         src: "/art_images/posters/mnl_13_bark.png",
         alt: "MNL 13 comedy show barking card",
         caption: "MNL 13 comedy show barking card"
     },
+    */
+
+   
 
 ];
 

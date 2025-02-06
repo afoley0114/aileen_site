@@ -16,6 +16,17 @@ function ImageGrid(imgsArray: ImageData[]) {
   );
 }
 
+function ImageCard(imgData: ImageData) {
+  return(
+    <div className= "max-w-9/10 w-full shadow-lg bg-slate-300">
+      <img className="w-"
+      ></img>
+
+    </div>
+
+  );
+}
+
 
 export default function Home() {
   const posterGallery = ImageGrid(posterImgs);
