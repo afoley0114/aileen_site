@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 
-interface ImageCardProps {
+export interface ImageCardProps {
     imgSrc: string;
     imgAlt: string;
     title: string;

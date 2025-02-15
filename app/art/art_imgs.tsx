@@ -1,3 +1,4 @@
+import { ImageCardProps } from 'components/ImageCard';
 
 
 
@@ -7,6 +8,18 @@ export interface ImageData {
     alt: string;
     caption: string
 }
+
+
+export const posterImgsCard: ImageCardProps = 
+        {
+            imgSrc: "/art_images/posters/mnl_14.png",
+            imgAlt:  "MNL 14 comedy show poster",
+            title:  "MNL 14 comedy show poster",
+            desc: "Done in Clip Studio Paint"
+        }
+
+
+
 
 export const posterImgs: ImageData[] = [
 
